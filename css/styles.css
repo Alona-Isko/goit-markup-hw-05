@@ -64,7 +64,7 @@ header {
 }
 
 .logo-color {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 .logo:hover {
@@ -661,6 +661,39 @@ fill: var(--accent-color);
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
+}
+
+.card-picture {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--animation-cubic) 250ms;
+}
+
+.overlay-content {
+  padding: 63px 24px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+
+  color: var(--primary-white-color);
+}
+
+.card-picture:hover .overlay {
+  transform: translateY(0);
 }
 
 /*Footer*/
